@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import Navigation from "@/components/Navigation";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -20,9 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistMono.className} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+      <body
+        className={`${geistMono.className} bg-primary text-foreground antialiased transition-all duration-300`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <div className="mx-auto flex min-h-screen w-full max-w-3xl flex-col items-center gap-16 p-16 max-md:p-8 max-sm:p-4">
+            <h1 className="text-center text-4xl font-bold tracking-tighter">
+              Youssef Ahrour
+            </h1>
+            <Navigation />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
