@@ -9,11 +9,6 @@ export const projects = [
         title: "view source code",
         href: "https://github.com/0x0bito/restaurant-cms",
       },
-      {
-        title: "view online demo",
-        href: "#",
-      },
-      ,
     ],
   },
   {

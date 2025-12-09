@@ -6,14 +6,8 @@ export default function Contact() {
       <h2 className="text-xl font-medium">Let’s Connect</h2>
       <div className="space-y-5">
         <p className="text-secondary text-[0.9rem] leading-7">
-          I’m currently open to full-time roles, internships, and freelance
-          collaborations. If my work aligns with what you&apos;re looking for,
-          I&apos;d be happy to discuss how I can contribute to your team or
-          project.
-        </p>
-        <p className="text-secondary text-[0.9rem] leading-7">
-          Whether you have an opportunity to share or simply want to connect,
-          feel free to reach out.
+          I’m open to full-time roles, internships, and freelance work. For
+          opportunities or direct contact, reach out.
         </p>
       </div>
       <div className="flex gap-4 text-[0.9rem]">
@@ -47,7 +41,7 @@ export default function Contact() {
               className="underline"
               target="_blank"
             >
-              0x0bit{" "}
+              0x0bito
             </Link>
           </li>
         </ul>
