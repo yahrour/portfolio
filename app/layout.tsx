@@ -25,13 +25,15 @@ export default function RootLayout({
         className={`${geistMono.className} bg-primary text-foreground antialiased transition-all duration-300`}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
-          <div className="mx-auto flex min-h-screen w-full max-w-3xl flex-col items-center gap-16 p-16 max-md:p-8 max-sm:p-4">
+          <header className="mx-auto w-full max-w-3xl space-y-10 p-16 pb-0 max-md:p-8 max-sm:p-4">
             <h1 className="text-center text-4xl font-bold tracking-tighter">
               Youssef Ahrour
             </h1>
             <Navigation />
+          </header>
+          <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col items-center gap-16 p-16 max-md:p-8 max-sm:p-4">
             {children}
-          </div>
+          </main>
         </ThemeProvider>
       </body>
     </html>
