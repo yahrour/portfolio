@@ -31,7 +31,7 @@ export default function RootLayout({
             </h1>
             <Navigation />
           </header>
-          <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col items-center gap-16 p-16 max-md:p-8 max-sm:p-4">
+          <main className="mx-auto flex h-fit w-full max-w-3xl flex-col items-center gap-16 p-16 max-md:p-10 max-sm:p-6">
             {children}
           </main>
         </ThemeProvider>
