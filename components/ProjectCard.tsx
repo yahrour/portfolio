@@ -1,11 +1,12 @@
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
-type linkObject = {
-  title: string;
-  href: string;
-};
+type linkObject =
+  | {
+      title: string;
+      href: string;
+    }
+  | undefined;
 
 type propsType = {
   title: string;
@@ -24,7 +25,7 @@ export default function ProjectCard({
     <div className="border-bcolor space-y-4 border-l-2 pl-4">
       <h3 className="font-medium">{title}</h3>
       <p className="text-secondary text-[0.9rem] leading-7">{description}</p>
-      <ul className="flex w-fit items-center gap-2 text-[0.9rem] font-medium">
+      <ul className="flex w-fit flex-wrap items-center gap-2 text-[0.9rem] font-medium">
         {techstack.map((element, idx) => (
           <li key={element} className="flex gap-2">
             <span>{element}</span>
@@ -32,14 +33,15 @@ export default function ProjectCard({
           </li>
         ))}
       </ul>
-      <ul className="text-sm">
-        {links.map((element) => (
-          <li key={element.href}>
+      <ul className="flex w-fit items-center gap-4 text-sm">
+        {links?.map((element) => (
+          <li key={element?.href}>
             <Link
-              href={element.href}
+              href={element?.href || ""}
               className="group flex items-center gap-1 underline"
+              target="_blank"
             >
-              {element.title}
+              {element?.title}
               <ArrowRight
                 size={12}
                 className="transition-all duration-300 group-hover:translate-x-1"
