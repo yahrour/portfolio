@@ -14,3 +14,18 @@
   --secondary: 200, 200, 200;
   --bcolor: 70, 70, 70;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    rotate: -180deg;
+  }
+  to {
+    opacity: 1;
+    rotate: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease forwards;
+}

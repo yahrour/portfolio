@@ -21,8 +21,13 @@ export default function ThemeToggle() {
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle theme"
+      className="cursor-pointer"
     >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      {theme === "dark" ? (
+        <Sun size={20} className="fadeIn" />
+      ) : (
+        <Moon size={20} className="fadeIn" />
+      )}
     </button>
   );
 }
