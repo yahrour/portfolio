@@ -9,6 +9,7 @@ export default function Skills() {
         <li>C/C++</li>
         <li>Docker/Docker Compose</li>
         <li>Express.js</li>
+        <li>PostgreSQL</li>
       </ul>
     </div>
   );
