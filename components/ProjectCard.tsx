@@ -23,9 +23,9 @@ export default function ProjectCard({
 }: propsType) {
   return (
     <div className="border-bcolor space-y-4 border-l-2 pl-4">
-      <h3 className="font-medium">{title}</h3>
+      <h3 className="text-[0.95rem] font-medium">{title}</h3>
       <p className="text-secondary text-[0.9rem] leading-7">{description}</p>
-      <ul className="flex w-fit flex-wrap items-center gap-2 text-[0.9rem] font-medium">
+      <ul className="flex w-fit flex-wrap items-center gap-2 text-[0.7rem] font-medium">
         {techstack.map((element, idx) => (
           <li key={element} className="flex gap-2">
             <span>{element}</span>
