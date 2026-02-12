@@ -1,3 +1,5 @@
+import { CopyToClipboard } from "@/components/CopyToClipboard";
+import { socials } from "@/constants";
 import Link from "next/link";
 
 export default function Contact() {
@@ -18,29 +20,18 @@ export default function Contact() {
         </ul>
         <ul className="flex flex-col gap-4">
           <li>
-            <Link
-              href={"https://linkedin.com/in/youssef-ahrour-2177a6383"}
-              className="underline"
-              target="_blank"
-            >
+            <Link href={socials.linkedin} className="underline" target="_blank">
               /in/youssef-ahrour
             </Link>
           </li>
-          <li>
-            <Link
-              href={"mailto:youssefahrour.contact@gmail.com"}
-              className="underline"
-              target="_blank"
-            >
-              youssefahrour.contact@gmail.com
+          <li className="space-x-2">
+            <Link href={`mailto:${socials.email}`} className="underline">
+              {socials.email}
             </Link>
+            <CopyToClipboard content={socials.email} />
           </li>
           <li>
-            <Link
-              href={"https://github.com/yahrour/"}
-              className="underline"
-              target="_blank"
-            >
+            <Link href={socials.github} className="underline" target="_blank">
               yahrour
             </Link>
           </li>

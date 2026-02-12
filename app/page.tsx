@@ -1,8 +1,10 @@
+import { CopyToClipboard } from "@/components/CopyToClipboard";
+import { socials } from "@/constants";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="space-y-20">
+    <div className="space-y-10">
       <div className="w-full space-y-10">
         <h2 className="text-xl font-medium">Get to Know Me</h2>
         <div className="space-y-4">
@@ -18,23 +20,19 @@ export default function Home() {
         </div>
       </div>
       <div className="space-x-8 text-sm">
-        <Link
-          href={"https://linkedin.com/in/youssef-ahrour-2177a6383"}
-          className="underline"
-        >
+        <Link href={socials.linkedin} className="underline" target="_blank">
           Linkedin
         </Link>
-        <Link
-          href={"mailto:youssefahrour.contact@gmail.com"}
-          className="underline"
-        >
-          Email
-        </Link>
-        <Link
-          href={"https://github.com/yahrour/"}
-          className="underline"
-          target="_blan"
-        >
+        <div className="inline-block space-x-2">
+          <Link
+            href={`mailto:${socials.email}`}
+            className="inline-block underline"
+          >
+            Email
+          </Link>
+          <CopyToClipboard content={socials.email} />
+        </div>
+        <Link href={socials.github} className="underline" target="_blank">
           Github
         </Link>
       </div>
