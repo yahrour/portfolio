@@ -4,6 +4,28 @@ import Navigation from "./Navigation";
 export default function Layout() {
   return (
     <>
+      <div className="absolute top-0 right-0 block h-[120px] w-[120px] max-md:hidden">
+        <img
+          src="/spiderweb.svg"
+          alt="spider"
+          width={120}
+          height={120}
+          className="fixed rotate-[1.2deg] select-none"
+          draggable={false}
+        />
+        <div className="spiderPivot">
+          <div className="spiderLine select-none"></div>
+          <img
+            src="/spider.svg"
+            alt="spider"
+            width={32}
+            height={32}
+            className="spider select-none"
+            draggable={false}
+          />
+        </div>
+      </div>
+
       <header className="mx-auto w-full max-w-3xl space-y-10 p-16 pb-0 max-md:p-8 max-sm:p-4">
         <h1 className="text-center text-4xl font-bold tracking-tighter">
           Youssef Ahrour

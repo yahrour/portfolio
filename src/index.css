@@ -36,3 +36,65 @@ body {
 .fadeIn {
   animation: fadeIn 0.3s ease forwards;
 }
+
+/* Spider Styling */
+
+@keyframes hideThenShow {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 142px;
+  }
+}
+
+@keyframes growLine {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 133px;
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes rotateLeftToRight {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: -4.5deg;
+  }
+}
+
+.spider {
+  rotate: 180deg;
+  position: absolute;
+  right: 20px;
+  animation:
+    hideThenShow 1s ease-in-out forwards,
+    leftToRight 1s ease-in-out infinite 1.5s alternate;
+}
+
+.spiderLine {
+  position: absolute;
+  border-width: 0px;
+  border-radius: 10px;
+  top: 15px;
+  right: 34px;
+  width: 2px;
+  height: 0px;
+  background-color: #ccc9c6;
+  transform-origin: top center;
+  animation:
+    growLine 1s ease-in-out forwards,
+    rotateLeftToRight 1s ease-in-out infinite 1.5s alternate;
+}
