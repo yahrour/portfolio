@@ -2,11 +2,6 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
-body {
-  font-family: "Geist Mono", monospace;
-  font-style: normal;
-}
-
 :root {
   --primary: 240, 240, 240;
   --foreground: 26, 26, 26;
@@ -19,6 +14,12 @@ body {
   --foreground: 240, 240, 240;
   --secondary: 200, 200, 200;
   --bcolor: 70, 70, 70;
+}
+
+body {
+  font-family: "Geist Mono", monospace;
+  font-style: normal;
+  @apply bg-primary text-foreground;
 }
 
 @keyframes fadeIn {

@@ -1,9 +1,13 @@
 import { NavLink } from "react-router";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   return (
     <nav className="w-full border-bcolor border-b pb-4">
       <ul className="text-secondary mx-auto flex max-w-xl items-center justify-between">
+        <li>
+          <ThemeToggle />
+        </li>
         <li>
           <NavLink
             to={"/"}
