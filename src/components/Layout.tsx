@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 export default function Layout() {
   return (
     <>
-      <div className="absolute top-0 right-0 block h-[120px] w-[120px] max-md:hidden">
+      <div className="absolute top-0 right-0 block h-30 w-30 max-md:hidden">
         <img
           src="/spiderweb.svg"
           alt="spider"

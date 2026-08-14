@@ -27,22 +27,31 @@ export default function Home() {
           </p>
         </div>
       </div>
+
       <div className="space-x-8 text-sm">
-        <Link to={socials.linkedin} className="underline" target="_blank">
-          Linkedin
-        </Link>
-        <div className="inline-block space-x-2">
-          <Link
-            to={`mailto:${socials.email}`}
-            className="inline-block underline"
-          >
-            Email
-          </Link>
-          <CopyToClipboard content={socials.email} />
-        </div>
-        <Link to={socials.github} className="underline" target="_blank">
-          Github
-        </Link>
+        {socials.map((social) => {
+          return (
+            <div className="inline">
+              <Link
+                to={
+                  social.name === "Email"
+                    ? `mailto:${social.href}`
+                    : social.href
+                }
+                className="underline"
+                target="_blank"
+              >
+                {social.name}
+              </Link>
+              {social.name === "Email" && (
+                <>
+                  {" "}
+                  <CopyToClipboard content={social.href} />
+                </>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
